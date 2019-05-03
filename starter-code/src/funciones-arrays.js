@@ -1,4 +1,14 @@
 // Find the maximum
+function maxOfTwoNumbers(num1, num2){
+  let respuesta;
+  if (num1>num2)
+    respuesta= num1;
+  else respuesta= num2;
+
+  return (respuesta);
+} 
+
+console.log(maxOfTwoNumbers(5, 8));
 
 // Finding Longest Word
 let words = [
