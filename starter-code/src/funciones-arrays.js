@@ -10,6 +10,8 @@ function maxOfTwoNumbers(num1, num2){
 
 console.log(maxOfTwoNumbers(5, 8));
 
+/**/
+
 // Finding Longest Word
 let words = [
   'mystery',
