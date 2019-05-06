@@ -10,7 +10,7 @@ function maxOfTwoNumbers(num1, num2){
 
 console.log(maxOfTwoNumbers(5, 8));
 
-/**/
+
 
 // Finding Longest Word
 let words = [
@@ -23,15 +23,52 @@ let words = [
   'crackpot'
 ];
 
+function findLongestWord(palabrasArray){
+  let resultado=palabrasArray[0];
+  for(x=0; x<palabrasArray.length; x++){
+    if (palabrasArray[x].length>resultado.length) resultado=palabrasArray[x];
+  }
+  return resultado;
+}
+ 
+console.log(findLongestWord(words));
+
 // Calculating a Sum
 
 let numbers = [6, 12, 1, 18, 13, 16, 2, 1, 8, 10];
+
+function sumArray(numeros){
+  let resultado=0;
+  for(x=0;x<numeros.length;x++){
+    resultado+=numeros[x];
+  }
+  return resultado;
+}
+
+console.log(sumArray(numbers));
 
 // Calculate the Average
 
 let numbersAvg = [2, 6, 9, 10, 7, 4, 1, 9];
 
+function averageNumbers(valoresArray){
+  let resultadoSuma=0;
+  let resultadoPromedio=0;
+  for(x=0; x<valoresArray.length; x++){
+    resultadoSuma+=valoresArray[x];
+  }
+  resultadoPromedio= resultadoSuma/valoresArray.length;
+  if (valoresArray.length===0){
+    return undefined;
+  }else {
+  return resultadoPromedio;
+  }
+}
+
+console.log(averageNumbers(numbersAvg));
+
 // Array of Strings
+
 let wordsArr = [
   'seat',
   'correspond',
@@ -44,6 +81,25 @@ let wordsArr = [
   'fuel',
   'palace'
 ];
+
+function averageWordLength(mediaString){
+  let resultado=0;
+  let respuesta=0;
+  for (x=0; x<mediaString.length; x++){
+    resultado+= mediaString[x].length;
+  }
+
+  respuesta=resultado/mediaString.length;
+  if(mediaString.length===0){
+    return undefined;
+  }else {
+  return respuesta;
+  }
+}
+
+console.log(averageWordLength(wordsArr));
+
+
 
 // Unique Arrays
 let wordsUnique = [
@@ -59,6 +115,28 @@ let wordsUnique = [
   'simple',
   'bring'
 ];
+
+function uniquifyArray(arrayEntrante){
+  let respuesta=[];
+  let i;
+  for(x=0; x<arrayEntrante.length; x++){
+    i=0;
+    for(y=0; y<respuesta.length; y++){
+      if (arrayEntrante[x]!==respuesta[y]){
+        i=1;
+      } else {
+          i=0;
+      }
+      if (i===1) {
+          respuesta.push(arrayEntrante[x]) ;
+      }
+    }
+  }
+  return respuesta;
+}
+
+console.log(uniquifyArray(wordsUnique));
+
 
 // Finding Elements
 let wordsFind = [
